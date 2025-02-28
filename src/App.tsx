@@ -1,10 +1,14 @@
+import Header from "./Header"
+
 function App() {
 
 
   return (
-    <div className="bg-amber-950">
-      test
-    </div>
+    <>
+
+    <Header/>
+
+    </>
   )
 }
 
