@@ -1,4 +1,5 @@
 import Header from "./Header"
+import MyWork from "./Components/MyWork/MyWork"
 
 function App() {
 
@@ -7,6 +8,7 @@ function App() {
     <>
 
     <Header/>
+    <MyWork/>
 
     </>
   )
