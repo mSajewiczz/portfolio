@@ -1,5 +1,6 @@
-import Header from "./Header"
+import Header from "./Components/Header/Header"
 import MyWork from "./Components/MyWork/MyWork"
+import MySkills from "./Components/MySkills/MySkills"
 
 function App() {
 
@@ -9,6 +10,7 @@ function App() {
 
     <Header/>
     <MyWork/>
+    <MySkills />
 
     </>
   )
