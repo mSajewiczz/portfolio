@@ -16,6 +16,7 @@ const dataArray = [
 ];
 
 export default function MyHistory() {
+    let isActive:boolean = false;
 	return (
 		<section className="flex flex-col justify-center items-center">
 			<div>
@@ -39,10 +40,10 @@ export default function MyHistory() {
 				<div className="flex flex-col gap-2">
 					<h1 className="text-3xl">Finished Courses</h1>
 					<p>Courses, that I had finished</p>
-                    <CourseCard title={dataArray[0].title} caption={dataArray[0].caption} date={dataArray[0].date}/>
-                    <CourseCard title={dataArray[1].title} caption={dataArray[1].caption} date={dataArray[1].date}/>
-                    <CourseCard title={dataArray[2].title} caption={dataArray[2].caption} date={dataArray[2].date}/>
-                    <CourseCard title={dataArray[3].title} caption={dataArray[3].caption} date={dataArray[3].date}/>
+                    <CourseCard isActive = {isActive} title={dataArray[0].title} caption={dataArray[0].caption} date={dataArray[0].date}/>
+                    <CourseCard isActive = {isActive}title={dataArray[1].title} caption={dataArray[1].caption} date={dataArray[1].date}/>
+                    <CourseCard isActive = {isActive}title={dataArray[2].title} caption={dataArray[2].caption} date={dataArray[2].date}/>
+                    <CourseCard isActive = {isActive}title={dataArray[3].title} caption={dataArray[3].caption} date={dataArray[3].date}/>
 				</div>
 			</div>
 		</section>
