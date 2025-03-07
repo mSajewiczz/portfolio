@@ -2,8 +2,15 @@ import { BsCalendar2DateFill } from "react-icons/bs";
 import { SlArrowDown } from "react-icons/sl";
 import { FaTv } from "react-icons/fa";
 import { useState } from "react";
-export default function CourseCard( {title, date, caption, isActive} ) {
 
+interface CourseCardProps{
+    title: string,
+    date: string, 
+    caption: string,
+    isActive: boolean
+}
+
+export default function CourseCard( {title, date, caption, isActive}:CourseCardProps ) {
     const [info, setInfo] = useState(false);
 
 
@@ -12,8 +19,6 @@ export default function CourseCard( {title, date, caption, isActive} ) {
         setInfo(value);
         isActive = value;
     }
-
-    let rotate = "rotate-180";
 
 	return (
 		<>

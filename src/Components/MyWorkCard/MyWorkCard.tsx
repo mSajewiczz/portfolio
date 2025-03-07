@@ -1,7 +1,15 @@
+import MyWorkCardPopup from "../MyWorkCardPopup/MyWorkCardPopup";
 import { useState } from "react";
-import { IoMdClose } from "react-icons/io";
 
-export default function MyWorkCard({ title, description, pageLink, img }) {
+interface MyWorkCardProps {
+    title: string,
+    description: string,
+    pageLink: string,
+    img: string
+}
+
+
+export default function MyWorkCard({ title, description, pageLink, img }:MyWorkCardProps) {
 	const [showPopup, setShowPopup] = useState(false);
 
 	function handleShowPopup(value:boolean) 
@@ -35,7 +43,7 @@ export default function MyWorkCard({ title, description, pageLink, img }) {
 			</div>
 
 
-            {showPopup && <div className="rounded-2xl border  h-160 w-300 bg-white absolute z-10"> <p>{title}</p> <img src={img} alt="" /> <button onClick = {handleClosePopup}><IoMdClose /></button></div>}
+            {showPopup && <MyWorkCardPopup title ={title} img={img} handleClosePopup={handleClosePopup}/>}
 		</>
 	);
 }
