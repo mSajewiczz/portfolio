@@ -63,7 +63,7 @@ export default function Header() {
 			{getRandomQuote()}
 			<section id="#header">
 				<h1 className="text-4xl">{currentText}</h1>
-				{/* <p>"<span className="italic">{quote}</span>" {author}</p> */}
+				<p>"<span className="italic">{quote}</span>" {author}</p>
 			</section>
 		</>
 	);
