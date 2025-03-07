@@ -5,6 +5,7 @@ import MyHistory from "./Components/MyHistory/MyHistory";
 import React, { useContext, useEffect, useState } from "react";
 import { AuthorContext } from "./Components/Context/AuthorContext";
 import { QuoteContext } from "./Components/Context/QuoteContext";
+import Footer from "./Components/Footer/Footer";
 
 const quotesArray = [
 	{
@@ -52,6 +53,7 @@ function getRandomQuote() {
 					<MySkills />
 				</AuthorContext.Provider>
 			</QuoteContext.Provider>
+			<Footer/>
 		</>
 	);
 }

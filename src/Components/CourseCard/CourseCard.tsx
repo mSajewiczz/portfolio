@@ -7,17 +7,19 @@ interface CourseCardProps{
     title: string,
     date: string, 
     caption: string,
-    isActive: boolean
+    isActive: boolean,
+    setIsActive: () => void,
+    queue: string
+    handleToggleCards: (value:boolean) => void
 }
 
-export default function CourseCard( {title, date, caption, isActive}:CourseCardProps ) {
+export default function CourseCard( {title, date, caption, isActive, setIsActive, queue, handleToggleCards}:CourseCardProps ) {
     const [info, setInfo] = useState(false);
-
 
     function handleShowData(value:boolean)
     {
         setInfo(value);
-        isActive = value;
+        handleToggleCards(value);
     }
 
 	return (
@@ -35,13 +37,3 @@ export default function CourseCard( {title, date, caption, isActive}:CourseCardP
 		</>
 	);
 }
-
-
-
-
-/*
-
-
-
-
-*/
