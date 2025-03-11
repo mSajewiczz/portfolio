@@ -1,6 +1,7 @@
 import React, {useContext, useState, useEffect } from "react";
 import { AuthorContext } from "../Context/AuthorContext";
 import { QuoteContext } from "../Context/QuoteContext";
+import MoreInfo from "../MoreInfo/MoreInfo";
 
 
 export default function Header( ) {
@@ -34,13 +35,31 @@ export default function Header( ) {
 
 	  return () => clearTimeout(timeout);
 	}, [currentIndex, delay, infinite, text]);
+
+
+	const [showPopup, setShowPopup] = useState(false);
+
+	function handleShowPopup()
+	{	
+		setShowPopup(true);
+
+		setTimeout(() => {
+			setShowPopup(false);
+		}, 3000)
+	}
 	
 	
 	return (
 		<>
 			<section id="#header">
+				{showPopup && <MoreInfo/>}
+				
 				<h1 className="text-4xl">{currentText}</h1>
 				<p>"<span className="italic">{quote}</span>" {author}</p>
+
+				<div>
+					<button className="border " onClick={handleShowPopup}>Get more info about me!</button>
+				</div>
 			</section>
 		</>
 	);
