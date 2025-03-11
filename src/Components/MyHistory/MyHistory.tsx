@@ -40,14 +40,14 @@ export default function MyHistory() {
     {
         valueOutside = value;
     }
-
+    
     const [isActive, setIsActive] = useState([
         {first: valueOutside},
         {second: valueOutside},
         {third: valueOutside},
         {fourth: valueOutside}
     ]);
-    
+
 	return (
 		<section className="flex flex-col justify-center items-center">
 			<div className="mb-10">
