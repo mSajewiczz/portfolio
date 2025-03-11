@@ -7,3 +7,4 @@
 - Napisałem to w TypeScript
 - Użyłem ikon z react-icons
 - Postawione na Vite
+- Użyłem createPortal z "react-dom"
